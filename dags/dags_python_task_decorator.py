@@ -10,7 +10,7 @@ with DAG(
     catchup=False
 ) as dag:
     
-    @task(tast_id="python_tesk_1")
+    @task(task_id="python_tesk_1")
     def print_context(some_input):
         print(some_input)
     
