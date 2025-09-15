@@ -20,7 +20,7 @@ with DAG(
         op_kwargs={ "start_date": "{{data_interval_start | ds}}" , "end_date" : "{{data_interval_end | ds}}"}
     )
 
-    @task(task_id="python_t2")
+    @task(task_id="python_t2") # 추천!
     def python_function2(**kwargs):
         print(kwargs)
         print("ds: " + kwargs["ds"])
