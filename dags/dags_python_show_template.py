@@ -1,4 +1,4 @@
-from airflow import DAG
+from airflow.sdk import DAG
 import pendulum
 import datetime
 from airflow.decorators import task
