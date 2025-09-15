@@ -12,7 +12,7 @@ with DAG(
     
     @task(task_id="python_task")
     def show_templates(**kwargs):
-        from pprint import print # 이쁘게 print해주는 출력문
+        from pprint import pprint # 이쁘게 print해주는 출력문
         pprint(kwargs)
 
     show_templates()
