@@ -20,7 +20,7 @@ with DAG(
             "START_DATE": "{{ data_interval_start | ds }}", # yyyy 10자리 형식
             "END_DATE" : "{{ data_interval_end | ds }}"
         },
-        bash_command="echo $START_DATE && $END_DATE"
+        bash_command="echo $START_DATE && echo $END_DATE"
     )
 
     bash_t1 >> bash_t2
