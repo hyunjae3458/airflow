@@ -31,4 +31,3 @@ with DAG(
     
     python_t1 >> python_function2()
 
-    ## 확인!!!!!!!!!!
