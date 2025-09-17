@@ -30,3 +30,5 @@ with DAG(
         print("task_instance: " + str(kwargs["ti"]))
     
     python_t1 >> python_function2()
+
+    ## 확인!!!!!!!!!!
