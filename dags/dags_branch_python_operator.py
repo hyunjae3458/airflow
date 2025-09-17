@@ -3,7 +3,7 @@ import pendulum
 import datetime
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.standard.operators.python import BranchPythonOperator
-from airflow.decorators import task
+
 
 with DAG(
     dag_id = "dags_python_email_xcom",
@@ -46,5 +46,5 @@ with DAG(
         python_callable=common_func,
         op_kwargs={"selected" : "C"}
     )
-    #
+    
     python_branch_task >> [task_a, task_b, task_c]
