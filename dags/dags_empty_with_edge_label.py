@@ -28,11 +28,11 @@ with DAG(
     )
 
     empty_5 = EmptyOperator(
-        task_id="empty_4"
+        task_id="empty_5"
     )
 
     empty_6 = EmptyOperator(
-        task_id="empty_4"
+        task_id="empty_6"
     )
 
     empty_2 >> Label("Start Branch") >> [empty_3,empty_4,empty_5] >> Label("End Branch") >> empty_6
