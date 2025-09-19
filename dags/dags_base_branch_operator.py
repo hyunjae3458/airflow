@@ -10,8 +10,8 @@ with DAG(
     catchup=False 
 ) as dag:
     class CustomBranchOperator(BaseBranchOperator):
-        def choose_branch(self,context):
-            import random
+        def choose_branch(self,context):  # context 객체 안에 파라미터들이 다 들어있음 ex)data_intervel_start   
+            import random 
             print(context)
             item_lst = ["A","B","C"]
             selected_item = random.choice(item_lst)
