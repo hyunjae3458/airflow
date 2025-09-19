@@ -13,7 +13,7 @@ with DAG(
 ) as dag:
     bash_upstream_1 = BashOperator(
         task_id="bash_upstream_1",
-        bash_command="ehco upstream1"
+        bash_command="echo upstream1"
     )
 
     @task(task_id="python_upstream_1")
