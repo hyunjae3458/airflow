@@ -32,7 +32,7 @@ with DAG(
     def task_b():
         print("정상 처리")
 
-    @task(task_id="task_C")
+    @task(task_id="task_c")
     def task_C():
         print("정상 처리")
 
