@@ -13,7 +13,7 @@ with DAG(
     tpss_route_section_time = HttpOperator(
         task_id="tpss_route_section_time",
         http_conn_id="openapi.seoul.go.kr",
-        endpoint="{{var.value.apikey_openapi_seoul_go_kr}}/jsoin/tpssRouteSectionTime/1/10/",
+        endpoint="{{ var.value.apikey_openapi_seoul_go_kr }}/json/tpssRouteSectionTime/1/10/",
         method="GET",
         headers={"Content-Type" : "application/json",
                  "Charset": "utf-8",
