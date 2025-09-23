@@ -22,3 +22,5 @@ with DAG(
                    "tbi_num" : "TbCorona19CountStatus_bulk2",
                    "file_nm" : "/opt/airflow/filesTbCorona19CountStatus/{{data_interval_end.in_timezone('Asia/Seoul') | ds_nodash}}/filesTbCorona19CountStatus.csv"}
     )
+
+    insert_postgres
