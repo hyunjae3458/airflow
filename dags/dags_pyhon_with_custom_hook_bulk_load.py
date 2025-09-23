@@ -13,7 +13,7 @@ with DAG(
     def insrt_postgres(postgres_conn_id, tbi_nm, file_nm, **kwargs):
         custom_postgres_hook = CustomPostgresHook(postgres_conn_id=postgres_conn_id)
         # 가져온 csv파일에서 ,를 바꾸고 헤더를 없애고 수정이면 replace 추가면 append를 나타내게 함
-        custom_postgres_hook.bulk_load(table_name=tbi_nm, file_name=file_nm, delimiter=",", is_header=True, is_replace=True)
+        custom_postgres_hook.bulk_load(table_name=tbi_nm, file_name=file_nm, delimiter="\t", is_header=True, is_replace=True)
 
     insert_postgres = PythonOperator(
         task_id="insert_postgres",
