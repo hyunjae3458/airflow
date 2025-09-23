@@ -19,7 +19,7 @@ with DAG(
         task_id="insert_postgres",
         python_callable=insrt_postgres,
         op_kwargs={"postgres_conn_id" : "conn_db_postgres_custom",
-                   "tbi_num" : "TbCorona19CountStatus_bulk2",
+                   "tbi_nm" : "TbCorona19CountStatus_bulk2",
                    "file_nm" : "/opt/airflow/filesTbCorona19CountStatus/{{data_interval_end.in_timezone('Asia/Seoul') | ds_nodash}}/filesTbCorona19CountStatus.csv"}
     )
 
