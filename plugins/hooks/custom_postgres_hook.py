@@ -44,4 +44,3 @@ class CustomPostgresHook(BaseHook):
                        schema="public",
                        if_exists=if_exists,
                        index=False)
-        
