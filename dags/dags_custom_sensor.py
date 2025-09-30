@@ -10,7 +10,7 @@ with DAG(
 ) as dag:
     tb_corona_19_count_status_sensor = SeoulApiDataSensor(
         task_id="tb_corona_19_count_status_sensor",
-        dataset_nm = "Tbcorona19CountStatus",
+        dataset_nm = "TbCorona19CountStatus",
         base_dt_col="S_DT",
         day_off=0,
         poke_interval=600, # 10분
@@ -19,7 +19,7 @@ with DAG(
 
     tv_corona_19_vaccine_stat_new_sensor = SeoulApiDataSensor(
         task_id="tv_corona_19_vaccine_stat_new_sensor",
-        dataset_nm = "tvcorona19VaccinestatNew",
+        dataset_nm = "tvCorona19VaccinestatNew",
         base_dt_col="S_VC_DT",
         day_off=-1,
         poke_interval=600, # 10분
