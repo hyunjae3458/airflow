@@ -33,5 +33,3 @@ with DAG(
         task_id="bash_success",
         bash_command="exit 0"
     )
-
-    
