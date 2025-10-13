@@ -8,7 +8,7 @@ with DAG(
     dag_id ="dags_on_failure_callback_to_slack",
     schedule="*/20 * * * *",
     start_date=pendulum.datetime(2025, 9 , 1, tz="Asia/Seoul"),
-    catchup=False
+    catchup=False,
     default_args={
         "on_failure_callback=" : on_failure_callback_to_slack,
         "exception_timeout" : timedelta(seconds=60)
