@@ -11,7 +11,7 @@ with DAG(
     catchup=False,
     default_args={
         "on_failure_callback" : on_failure_callback_to_slack,
-        "excution_timeout" : timedelta(seconds=60)
+        "execution_timeout" : timedelta(seconds=60)
     } 
 ) as dag:
     task_slp_90 = BashOperator(
