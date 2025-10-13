@@ -3,7 +3,7 @@ from dateutil.relativedelta import relativedelta
 import os
 import json
 import requests
-from airflow.models import Variable
+from airflow.sdk import Variable
 
 REDIRECT_URL = "https://example.com/oauth"
 
