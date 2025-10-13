@@ -14,9 +14,8 @@ def _refresh_token_to_variable():
     url = "https://kauth.kakao.com/oauth/token"
     data = {
         "grant_type" : "authorization_code",
-        "client_id" : client_id,
-        "redirect_uri" : f"{client_id}",
-        "code" : f"{refresh_token}"
+        "client_id" : f"{client_id}",
+        "refresh_token" : f"{refresh_token}",
     }
     response = requests.post(url,data=data)
     rslt= response.json()
