@@ -13,7 +13,7 @@ def _refresh_token_to_variable():
     refresh_token = tokens.get("refresh_token")
     url = "https://kauth.kakao.com/oauth/token"
     data = {
-        "grant_type" : "authorization_code",
+        "grant_type" : "refresh_token",
         "client_id" : f"{client_id}",
         "refresh_token" : f"{refresh_token}",
     }
