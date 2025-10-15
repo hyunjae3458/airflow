@@ -21,7 +21,7 @@ with DAG(
     task_slp100_sla180 = BashOperator(
         task_id = "task_slp100_sla180",
         bash_command="sleep 100",
-        sla=timedelta(minutes=2)
+        sla=timedelta(minutes=3)
     )
 
     task_slp60_sla245 = BashOperator(
@@ -35,4 +35,4 @@ with DAG(
         bash_command="sleep 60",
         sla=timedelta(seconds=250)
     )
-    seconds=245 >> task_slp100_sla180 >> task_slp60_sla245 >> task_slp60_sla250
+    task_slp100_sla120 >> task_slp100_sla180 >> task_slp60_sla245 >> task_slp60_sla250
