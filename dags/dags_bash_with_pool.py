@@ -9,7 +9,7 @@ with DAG(
     start_date=pendulum.datetime(2025, 9 , 1, tz="Asia/Seoul"),
     catchup=False,
     default_args= {
-        "pool" : "poll_small"
+        "pool" : "pool_small"
     }
 ) as dag:
     
