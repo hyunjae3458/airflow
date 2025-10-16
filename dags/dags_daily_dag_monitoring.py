@@ -64,7 +64,7 @@ with DAG(
                     now = pendulum.now("Asia/Seoul").strftime("%Y-%m-%d %H:%M:%S")
                     return_blocks = [sb.section_text(f"DAG 수행현화 알람({yesterday} ~ {now})"),
                                      sb.divider(),
-                                     sb.section_text(f"*1. 수행 대상 DAG 개수*: {rslt.shape[0]}\n  (1) 성공 DAG 개수: {done_success_cnt}\n (2) 실패: {failed_df.shpae[0]}\n (3) 미수행: {skipped_df.shape[0]}\n (4) 수행 중: {running_df.shape[0]}"),
+                                     sb.section_text(f"*1. 수행 대상 DAG 개수*: {rslt.shape[0]}\n  (1) 성공 DAG 개수: {done_success_cnt}\n (2) 실패: {failed_df.shape[0]}\n (3) 미수행: {skipped_df.shape[0]}\n (4) 수행 중: {running_df.shape[0]}"),
                                      sb.divider
                     ] + return_blocks
                     return return_blocks
